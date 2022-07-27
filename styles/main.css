@@ -92,12 +92,6 @@
     grid-template-columns: auto auto;
 }
 
-.title-category {
-    z-index: 2;
-    color: #fff;
-    cursor: pointer;
-}
-
 .category {
     width: 645px;
     height: 345px;
@@ -106,6 +100,15 @@
     border-radius: 10px;
     background-color:#BC1400;
     justify-content: center;
+}
+
+.title-category {
+    color: #fff;
+}
+
+.category a {
+    z-index: 1;
+    text-decoration: none;
 }
 
 .category-img {
@@ -121,4 +124,27 @@
 .category-img-hover {
     opacity: .0;
     transition: all 1s ease;
+}
+
+/* Apartado de estilos del contendor de descuentos. */
+.container_sale {
+    margin-top: 30px;
+}
+
+.title-sale {
+    color:#252630;
+    text-align: center;
+}
+
+.sales {
+    width: 95%;
+    display: block;
+    color:#252630;
+    font-weight: 600;
+    text-align: right;
+    text-decoration: none;
+}
+
+.sales:hover {
+    color: #BC1400;
 }
