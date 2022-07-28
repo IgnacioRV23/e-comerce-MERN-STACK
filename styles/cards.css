@@ -1,8 +1,8 @@
 /* Hoja de estilos que se encargará de todas las tarjetas de productos del proyecto. */
 
 .container-cards {
+    width: 96%;
     margin:auto;
-    width: 95%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -10,7 +10,6 @@
 
 /* Estilos del contenedor de la tarjeta. */
 .card {
-    margin: 10px;
     padding: 10px;
     width: min-content;
     height: min-content;

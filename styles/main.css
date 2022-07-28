@@ -128,6 +128,7 @@
 
 /* Apartado de estilos del contendor de descuentos. */
 .container_sale {
+    margin: auto;
     margin-top: 30px;
 }
 
@@ -136,15 +137,22 @@
     text-align: center;
 }
 
-.sales {
+.container-btn-list {
     width: 95%;
-    display: block;
+    margin: auto;
+    text-align: right;
+}
+
+.sales {
     color:#252630;
     font-weight: 600;
     text-align: right;
     text-decoration: none;
+    display: inline-block;
+    transition: all 300ms;
 }
 
 .sales:hover {
     color: #BC1400;
+    transition: all 300ms;
 }
