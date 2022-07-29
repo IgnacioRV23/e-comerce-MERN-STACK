@@ -16,6 +16,10 @@
 }
 
 /* Estilos para los links de navegación. */
+.logo {
+    width: 150px;
+}
+
 .container-nav-links a {
     margin: 0 15px;
     text-decoration: none;
@@ -76,9 +80,35 @@
 }
 
 /* Estilo para el carousel de la página inicial. */
-.img-banner {
+.carousel {
     width: 100%;
     height: 500px;
+}
+
+.img-show {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    position: absolute;
+    transition: all 2s;
+}
+
+.img-left {
+    left: 0;
+    width: 0px;
+    height: inherit;
+    object-fit: cover;
+    position: absolute;
+    transition: all 2s ease-in-out;
+}
+
+.img-right {
+    right: 0;
+    width: 0px;
+    height: inherit;
+    object-fit: cover;
+    position: absolute;
+    transition: all 2s ease-in-out;
 }
 
 /* Estilos para el apartado de categorias. */
@@ -160,12 +190,16 @@
 
 /* Apartado de estilos de la sección del footer. */
 .footer {
-    display: grid;
     cursor: default;
     margin-top: 30px;
+}
+
+.footer-grid {
+    display: grid;
     user-select: none;
     grid-template-rows: 1;
     grid-template-columns: 1fr 1fr;
+    
 }
 
 /* Apartado de estilos de la sección de pagos dentro del footer. */
@@ -207,4 +241,12 @@
 
 .data-contact {
     color:#fff;
+}
+
+.text-copy {
+    font-size: 14px;
+    color: #74768F;
+    text-align: center;
+    background-color: #000;
+    padding: 10px;
 }

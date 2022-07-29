@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/img/favicon.svg">
+    <link rel="icon" href="/img/main/favicon.svg">
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/cards.css">
     <title>NEED TO</title>
 </head>
 <body>
     <nav class="nav">
-        <img src="/img/logo.png" alt="logo-need-to">
+        <img src="/img/main/logo.png" alt="logo-need-to" class="logo">
         <div class="container-nav-links">
             <a href="#">Electrónica</a>
             <a href="#">Mujer</a>
@@ -34,35 +34,40 @@
             </div>
         </div>
     </nav>
+
     <main class="main">
         <div class="carousel">
-            <img src="/img/banner1.png" alt="img-banner" class="img-banner" id="imgCarousel">
+            <img src="/img/banner/banner1.png" alt="img-banner1" class="img-show" id="imgBanner1">
+            <img src="/img/banner/banner2.png" alt="img-banner2" class="img-left" id="imgBanner2">
+            <img src="/img/banner/banner3.png" alt="img-banner3" class="img-left" id="imgBanner3">
+            <img src="/img/banner/banner4.png" alt="img-banner4" class="img-left" id="imgBanner4">
+            <img src="/img/banner/banner5.png" alt="img-banner6" class="img-left" id="imgBanner5">
         </div>
 
         <div class="container_category">
             <section class="category-electronics category">
-                <img src="img/category-electronics.png" alt="category-electronics" class="category-img" id="imgElec">
+                <img src="img/category/category-electronics.png" alt="category-electronics" class="category-img" id="imgElec">
                 <a href="#">
                     <h2 class="title-category" id="titleElec">Electrónica</h2>
                 </a>
             </section>
 
             <section class="category-woman category">
-                <img src="img/category-woman.png" alt="category-electronics" class="category-img" id="imgWoman">
+                <img src="img/category/category-woman.png" alt="category-electronics" class="category-img" id="imgWoman">
                 <a href="#">
                     <h2 class="title-category" id="titleWoman">Mujer</h2>
                 </a>
             </section>
 
             <section class="category-man category">
-                <img src="img/category-man.png" alt="category-electronics" class="category-img" id="imgMan">
+                <img src="img/category/category-man.png" alt="category-electronics" class="category-img" id="imgMan">
                 <a href="#">
                     <h2 class="title-category" id="titleMan">Hombre</h2>
                 </a>
             </section>
 
             <section class="category-home category">
-                <img src="img/category-home.png" alt="category-electronics" class="category-img" id="imgHome">
+                <img src="img/category/category-home.png" alt="category-electronics" class="category-img" id="imgHome">
                 <a href="#">
                     <h2 class="title-category" id="titleHome">Hogar</h2>
                 </a>
@@ -79,7 +84,7 @@
                 <article class="card">
                     <div class="container-card-img">
                         <p class="tag-sale">10%OFF</p>
-                        <img src="/img/bag-woman.png" alt="bag-woman" class="product-img">
+                        <img src="img/main/bag-woman.png" alt="bag-woman" class="product-img">
                     </div>
                     <div class="card-detail">
                         <p class="product-name">Nombre del producto</p>
@@ -96,7 +101,7 @@
                 <article class="card">
                     <div class="container-card-img">
                         <p class="tag-sale">10%OFF</p>
-                        <img src="/img/bag-woman.png" alt="bag-woman" class="product-img">
+                        <img src="img/main/bag-woman.png" alt="bag-woman" class="product-img">
                     </div>
                     <div class="card-detail">
                         <p class="product-name">Nombre del producto</p>
@@ -113,7 +118,7 @@
                 <article class="card">
                     <div class="container-card-img">
                         <p class="tag-sale">10%OFF</p>
-                        <img src="/img/bag-woman.png" alt="bag-woman" class="product-img">
+                        <img src="img/main/bag-woman.png" alt="bag-woman" class="product-img">
                     </div>
                     <div class="card-detail">
                         <p class="product-name">Nombre del producto</p>
@@ -130,7 +135,7 @@
                 <article class="card">
                     <div class="container-card-img">
                         <p class="tag-sale">10%OFF</p>
-                        <img src="/img/bag-woman.png" alt="bag-woman" class="product-img">
+                        <img src="img/main/bag-woman.png" alt="bag-woman" class="product-img">
                     </div>
                     <div class="card-detail">
                         <p class="product-name">Nombre del producto</p>
@@ -148,26 +153,32 @@
     </main>
 
     <footer class="footer">
-        <div class="container-footer">
-            <p class="title-footer">Pague con</p>
-            <section class="footer-icons">
-                <img src="icons/paypal.svg" alt="icon-paypal" class="icon-pay">
-                <img src="icons/mastercard.svg" alt="icon-mastercard" class="icon-pay">
-                <img src="icons/visa.svg" alt="icon-visa" class="icon-pay">
-            </section>
+        <div class="footer-grid">
+            <div class="container-footer">
+                <p class="title-footer">Pague con</p>
+                <section class="footer-icons">
+                    <img src="icons/paypal.svg" alt="icon-paypal" class="icon-pay">
+                    <img src="icons/mastercard.svg" alt="icon-mastercard" class="icon-pay">
+                    <img src="icons/visa.svg" alt="icon-visa" class="icon-pay">
+                </section>
+            </div>
+    
+            <div class="container-footer">
+                <p class="title-footer">Soporte técnico</p>
+                <section class="container-contact">
+                    <img src="icons/phone.svg" alt="icon-phone" class="icon-contact">
+                    <p class="data-contact">(800) 555-000</p>
+                </section>
+                <section class="container-contact">
+                    <img src="icons/mail.svg" alt="icon-mail" class="icon-contact">
+                    <p class="data-contact">soporte.tec@mail.com</p>
+                </section>
+            </div>
         </div>
 
-        <div class="container-footer">
-            <p class="title-footer">Soporte técnico</p>
-            <section class="container-contact">
-                <img src="icons/phone.svg" alt="icon-phone" class="icon-contact">
-                <p class="data-contact">(800) 555-000</p>
-            </section>
-            <section class="container-contact">
-                <img src="icons/mail.svg" alt="icon-mail" class="icon-contact">
-                <p class="data-contact">soporte.tec@mail.com</p>
-            </section>
-        </div>
+        <p class="text-copy">
+            &copy; Copyright - Todos los derechos reservados - Ignacio Rodríguez Varela
+        </p>
     </footer>
 
     <script src="js/carousel.js"></script>
