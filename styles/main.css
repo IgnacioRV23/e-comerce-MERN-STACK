@@ -28,6 +28,7 @@
 
 .container-nav-links a:hover {
     color: #BC1400;
+    font-weight: 600;
     transition: 300ms all;
 }
 
@@ -166,8 +167,19 @@
 .category-img {
     width: inherit;
     height: inherit;
+    object-fit: cover;
     position: absolute;
     border-radius: 10px;
+    transition: all 1.8s;
+}
+
+.category-hidden {
+    width: 0px;
+    height: 0px;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 10px;
+    transition: all 1s;
 }
 
 .title-category {
