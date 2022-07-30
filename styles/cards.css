@@ -1,11 +1,11 @@
 /* Hoja de estilos que se encargará de todas las tarjetas de productos del proyecto. */
 
 .container-cards {
-    width: 96%;
+    gap: 15px 35px;
     margin:auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 /* Estilos del contenedor de la tarjeta. */

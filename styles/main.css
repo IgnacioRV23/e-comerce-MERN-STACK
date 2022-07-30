@@ -82,7 +82,7 @@
 /* Estilo para el carousel de la página inicial. */
 .carousel {
     width: 100%;
-    height: 500px;
+    height: 560px;
 }
 
 .img-show {
@@ -111,55 +111,11 @@
     transition: all 2s ease-in-out;
 }
 
-/* Estilos para el apartado de categorias. */
-.container_category {
-    gap: 10px;
-    display: grid;
-    user-select: none;
-    margin: 20px auto;
-    width: max-content;
-    grid-template-rows: auto auto;
-    grid-template-columns: auto auto;
-}
-
-.category {
-    width: 645px;
-    height: 345px;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    background-color:#BC1400;
-    justify-content: center;
-}
-
-.title-category {
-    color: #fff;
-}
-
-.category a {
-    z-index: 1;
-    text-decoration: none;
-}
-
-.category-img {
-    z-index: 1;
-    opacity: 1;
-    width: 645px;
-    height: 345px;
-    position: absolute;
-    border-radius: 10px;
-    transition: all 1s ease;
-}
-
-.category-img-hover {
-    opacity: .0;
-    transition: all 1s ease;
-}
-
 /* Apartado de estilos del contendor de descuentos. */
 .container_sale {
+    width: 95%;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 35px;
 }
 
 .title-sale {
@@ -174,9 +130,11 @@
 }
 
 .sales {
+    top: -30px;
     color:#252630;
     font-weight: 600;
     text-align: right;
+    position: relative;
     text-decoration: none;
     display: inline-block;
     transition: all 300ms;
@@ -187,6 +145,38 @@
     transition: all 300ms;
 }
 
+/* Estilos para el apartado de categorias. */
+.container_category {
+    gap: 20px;
+    display: grid;
+    margin: 50px auto;
+    width: max-content;
+    grid-template-rows: 300px;
+    grid-template-columns: 600px 600px;
+}
+
+.category {
+   width: 600px;
+   height: 300px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.category-img {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.title-category {
+    z-index: 1;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
 
 /* Apartado de estilos de la sección del footer. */
 .footer {
