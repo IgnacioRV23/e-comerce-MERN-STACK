@@ -11,6 +11,8 @@
 /* Estilos del contenedor de la tarjeta. */
 .card {
     padding: 10px;
+    cursor: default;
+    user-select: none;
     width: min-content;
     height: min-content;
     border-radius: 10px;
@@ -22,7 +24,6 @@
 .tag-sale {
     color:#fff;
     padding: 5px;
-    cursor: default;
     width: min-content;
     position: absolute;
     border-radius: 5px;
@@ -41,6 +42,19 @@
     border-radius: 5px;
 }
 
+/* Estilos para la etiqueta de las tarjetas con productos flash. */
+.tag-flash {
+    padding: 5px;
+    display: flex;
+    cursor: default;
+    position: absolute;
+    border-radius: 5px;
+    background-color: #BC1400;
+}
+
+.flash {
+    color:#fff;
+}
 
 /* Estilos del texto que está dentro de la tarjeta. */
 .card-detail {
