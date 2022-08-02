@@ -63,28 +63,3 @@
 .price-red {
     color: #BC1400;
 }
-
-
-/* Estilos de los botones de la tajeta. */
-.btn {
-    border:none;
-    width: 170px;
-    color: #fff;
-    padding: 10px;
-    display: block;
-    cursor: pointer;
-    margin: 10px auto;
-    border-radius: 5px;
-    background-color: #000;
-    text-transform: uppercase;
-    transition: all 300ms ease-in-out;
-}
-
-.btn-red {
-    background-color: #BC1400;
-}
-
-.btn:hover {
-    border-radius: 10px;
-    transition: all 300ms ease-in-out;
-}
