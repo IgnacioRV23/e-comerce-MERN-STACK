@@ -1,5 +1,6 @@
 import { Nav } from './components/Nav';
 import { Main } from './components/Main';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
@@ -9,8 +10,11 @@ function App() {
 
       {/*Componente de todo el apartado principal.*/}
       <Main/>
+
+      {/*Componente de todo el apartado de pie de pagina.*/}
+      <Footer/>
     </>
   );
-}
+};
 
 export default App;
