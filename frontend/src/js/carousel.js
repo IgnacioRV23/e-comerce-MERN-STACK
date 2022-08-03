@@ -10,7 +10,7 @@ const imgBanner4 = document.getElementById("imgBanner4");
 
 const imgBanner5 = document.getElementById("imgBanner5");
 
-const carousel = () => {
+export const carousel = () => {
     switch (counter) {
         case 1:
             //Se oculta al lado izquierdo la imagen 4.
