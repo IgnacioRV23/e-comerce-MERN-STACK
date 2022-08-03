@@ -1,9 +1,4 @@
 //Importaciones de las imagenes necesarias para el componenete main.
-import banner1 from '../img/banner/banner1.png';
-import banner2 from '../img/banner/banner2.png';
-import banner3 from '../img/banner/banner3.png';
-import banner4 from '../img/banner/banner4.png';
-import banner5 from '../img/banner/banner5.png';
 import bagWoman from '../img/main/bag-woman.png';
 import care from '../img/category/category-care.png';
 import care2 from '../img/category/category-care2.png';
@@ -29,11 +24,6 @@ import samsung from '../icons/samsung.svg';
 import zara from '../icons/zara.svg';
 
 export const imgMain = {
-    banner1,
-    banner2,
-    banner3,
-    banner4,
-    banner5,
     bagWoman,
     care,
     care2,

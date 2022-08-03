@@ -1,16 +1,16 @@
 let counter = 1;
 
-const imgBanner1 = document.getElementById("imgBanner1");
-
-const imgBanner2 = document.getElementById("imgBanner2");
-
-const imgBanner3 = document.getElementById("imgBanner3");
-
-const imgBanner4 = document.getElementById("imgBanner4");
-
-const imgBanner5 = document.getElementById("imgBanner5");
-
 export const carousel = () => {
+    const imgBanner1 = document.getElementById("imgBanner1");
+
+    const imgBanner2 = document.getElementById("imgBanner2");
+
+    const imgBanner3 = document.getElementById("imgBanner3");
+
+    const imgBanner4 = document.getElementById("imgBanner4");
+
+    const imgBanner5 = document.getElementById("imgBanner5");
+
     switch (counter) {
         case 1:
             //Se oculta al lado izquierdo la imagen 4.

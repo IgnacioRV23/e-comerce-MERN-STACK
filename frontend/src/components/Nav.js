@@ -10,9 +10,9 @@ import cart from '../icons/cart.svg';
 export const Nav = () => {
     return (
         <div>
-            <nav class="nav">
-                <img src={logo} alt="logo-need-to" class="logo" />
-                <div class="container-nav-links">
+            <nav className="nav">
+                <img src={logo} alt="logo-need-to" className="logo" />
+                <div className="container-nav-links">
                     <a href="#">Electrónica</a>
                     <a href="#">Mujer</a>
                     <a href="#">Hombre</a>
@@ -21,15 +21,15 @@ export const Nav = () => {
                     <a href="#">Hogar</a>
                     <a href="#">Salud y belleza</a>
                 </div>
-                <div class="container-nav-search">
-                    <img src={search} alt="icon-search" class="nav-icon" />
-                    <input type="text" placeholder="Search" class="nav-search" />
-                    <img src={close} alt="icon-close" class="nav-icon" />
+                <div className="container-nav-search">
+                    <img src={search} alt="icon-search" className="nav-icon" />
+                    <input type="text" placeholder="Search" className="nav-search" />
+                    <img src={close} alt="icon-close" className="nav-icon" />
                 </div>
 
-                <div class="container-cart">
-                    <img src={cart} alt="icon-cart" class="icon-cart" />
-                    <div class="cart-count">
+                <div className="container-cart">
+                    <img src={cart} alt="icon-cart" className="icon-cart" />
+                    <div className="cart-count">
                         20
                     </div>
                 </div>
