@@ -121,14 +121,44 @@
 }
 
 
+/* Apartado de estilos de para el reloj de productos flash. */
+.container_clock {
+    gap: 5px;
+    top:-50px;
+    width: 98%;
+    display: flex;
+    cursor: default;
+    user-select: none;
+    border-radius: 5px;
+    position: relative;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.time {
+    padding: 5px;
+    font-size: 34px;
+    color: #252630;
+    font-weight: bold;
+    border-radius: 5px;
+    background: linear-gradient(360deg, #dddddd, #b0b0b0);
+}
+
+.point {
+    color: #252630;
+    font-size: 40px;
+}
+
+
 /* Apartado de estilos de la sección de anuncio. */
 .container_anuncio {
-    margin: 25px;
+    margin: 50px 30px;
     text-align: center;
 }
 
 .img-anuncio {
     width: 95%;
+    margin: 100px 0;
     border-radius: 10px;
 }
 
@@ -136,7 +166,7 @@
 .container_brands {
     gap: 35px;
     display: flex;
-    margin: 30px 0;
+    margin: 100px 0;
     user-select: none;
     align-items: center;
     justify-content: center;

@@ -33,6 +33,10 @@
     transition: 300ms all;
 }
 
+.container_menu {
+    display: none;
+}
+
 /* Estilos para el buscador de productos. */
 .container-nav-search {
     display: flex;

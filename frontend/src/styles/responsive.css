@@ -1,0 +1,48 @@
+/* Estilos para los elementos responsive mobile. */
+
+@media (max-width:768px) {
+    .nav {
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .container-nav-links a {
+        display: none;
+    }
+
+    .container-nav-search {
+        display: none;
+    }
+
+    .logo {
+        position: absolute;
+        left: 10px;
+    }
+
+    .container_menu {
+        display: inline-block;
+    }
+
+    .menu {
+        width: 40px;
+    }
+
+    .nav-links-mobile {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        z-index: 1;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+
+    }
+    
+    .nav-links-mobile a {
+        color: #252630;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 25px;
+        border-bottom: 1px solid #74768F;
+    }
+}

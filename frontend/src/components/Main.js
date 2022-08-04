@@ -2,7 +2,10 @@ import React from 'react'
 import '../styles/btn.css';
 import '../styles/main.css';
 import '../styles/cards.css';
-import {Carousel} from './Carousel';
+import '../styles/responsive.css';
+
+//Importacion de los componentes necesarios.
+import { Carousel } from './Carousel';
 import { Sales } from './Sales';
 import { Category } from './Category';
 import { Flash } from './Flash';
@@ -11,13 +14,13 @@ import { imgMain } from '../js/imgMain';
 export const Main = () => {
   return (
     <main className="main">
-      <Carousel/>
+      <Carousel />
 
-      <Sales/>
+      <Sales />
 
-      <Category/>
+      <Category />
 
-      <Flash/>
+      <Flash />
 
       <div className="container_anuncio">
         <img src={imgMain.ad} alt="anuncio" className="img-anuncio" />
@@ -35,4 +38,4 @@ export const Main = () => {
       </div>
     </main>
   )
-}
+};
