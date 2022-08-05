@@ -47,6 +47,12 @@
         border-bottom: 1px solid #74768F;
     }
 
+    /* Estilos para el link de ver todo, que pertenece al componente Sales. */
+    .sales {
+        color: #BC1400;
+        font-size: 12px;
+    }
+
     /* Modificacion de estilos para los elementos de category */
     .container_category {
         grid-template-rows: auto;
@@ -67,13 +73,6 @@
 
 @media (max-width:425px) {
     /* Apartado de estilos para las categorias en dispositivos mobile. */
-
-    /* Estilos para el link de ver todo, que pertenece al componente Sales. */
-    .sales {
-        color: #BC1400;
-        font-size: 12px;
-    }
-
     .category {
         width: 300px;
         height: 175px;
@@ -112,6 +111,10 @@
     /* Estilos para los elementos del footer. */
     .footer * {
         font-size: 8px;
+    }
+
+    .footer-flex {
+        flex-direction: column-reverse;
     }
 
     .icon-pay {
