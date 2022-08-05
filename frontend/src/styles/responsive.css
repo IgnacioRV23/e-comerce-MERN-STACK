@@ -1,6 +1,7 @@
-/* Estilos para los elementos responsive mobile. */
+/* Estilos para los elementos responsive */
 
 @media (max-width:768px) {
+    /* Modificacion de estilos para los elementos del nav. */
     .nav {
         align-items: center;
         justify-content: flex-end;
@@ -44,5 +45,80 @@
         text-decoration: none;
         padding: 25px;
         border-bottom: 1px solid #74768F;
+    }
+
+    /* Modificacion de estilos para los elementos de category */
+    .container_category {
+        grid-template-rows: auto;
+        grid-template-columns: max-content;
+    }
+
+    .container_brands {
+        gap:15px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .brand {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width:425px) {
+    /* Apartado de estilos para las categorias en dispositivos mobile. */
+
+    /* Estilos para el link de ver todo, que pertenece al componente Sales. */
+    .sales {
+        color: #BC1400;
+        font-size: 12px;
+    }
+
+    .category {
+        width: 300px;
+        height: 175px;
+    }
+
+    /* Estilos para el apartado de reloj. */
+    .container_clock {
+        width: 90%;
+        position: static;
+        margin:10px auto;
+        width: max-content;
+    }
+
+    .time {
+        font-size: 18px;
+    }
+
+    .point {
+        font-size: 20px;
+    }
+
+    /* Estilos para el anuncio. */
+    .container_anuncio {
+        margin: 10px;
+        text-align: center;
+        
+    }
+
+    .img-anuncio {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    /* Estilos para los elementos del footer. */
+    .footer * {
+        font-size: 8px;
+    }
+
+    .icon-pay {
+        width: 50px;
+    }
+
+    .icon-contact {
+        width: 15px;
     }
 }
