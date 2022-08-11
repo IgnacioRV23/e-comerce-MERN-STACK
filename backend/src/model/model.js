@@ -7,7 +7,8 @@ const productSchema = new Schema({
     description: String,
     sale: Number,
     subcategory: String,
-    detail: String
+    detail: String,
+    image: String
 });
 
 module.exports = model('product', productSchema);
