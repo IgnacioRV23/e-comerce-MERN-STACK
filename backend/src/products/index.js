@@ -1,13 +1,20 @@
-const express = require('express');
+const Product = require('../model/model');
 
-const { ProductsController } = require('./controller');
+const { connectionDB } = require('../model/connection');
 
-const router = express.Router();
+connectionDB();
+
+const getProducts = (app) => {
+    try {
+        app.get('/api/products', async (req, res) => {
+            const products = await Product.find({});
+            res.status(200).json({data:products});
+        });
+    } catch (error) {
+        res.status(500).json({message:`ProductsAPI:getProducts:error: ${error}`});
+    }
+}
 
 module.exports.ProductsAPI = (app) => {
-    router
-    .get('/', ProductsController.getProducts)
-    .post('/', ProductsController.createProduct);
-    
-    app.use('/api/products', router);
+    getProducts(app)
 };
