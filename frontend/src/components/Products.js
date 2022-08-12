@@ -24,7 +24,7 @@ export const Products = () => {
                         <div key={element._id}>
                             <p>{element.name}</p>
                             <p>{element.detail}</p>
-                            <img src={productsImg(`./${element.img}`)} alt='img'/>
+                            <img src={productsImg(`./${element.image}`)} alt='img'/>
                         </div>
                     )
                 })
