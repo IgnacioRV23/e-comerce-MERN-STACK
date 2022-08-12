@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 
 import axios from 'axios';
 
+const productsImg = require.context('../img/products', true);
+
 export const Products = () => {
 
     const [list, setList] = useState([]);
@@ -22,6 +24,7 @@ export const Products = () => {
                         <div key={element._id}>
                             <p>{element.name}</p>
                             <p>{element.detail}</p>
+                            <img src={productsImg(`./${element.img}`)} alt='img'/>
                         </div>
                     )
                 })
