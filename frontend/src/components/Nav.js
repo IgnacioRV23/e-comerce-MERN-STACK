@@ -8,6 +8,7 @@ import search from '../icons/search.svg';
 import close from '../icons/close.svg';
 import cart from '../icons/cart.svg';
 import menu from '../icons/menu.svg';
+import { Link } from 'react-router-dom';
 
 export const Nav = () => {
     const [checkMenu, setCheckMenu] = useState(false);
@@ -25,15 +26,16 @@ export const Nav = () => {
     return (
         <div>
             <nav className="nav">
-                <img src={logo} alt="logo-need-to" className="logo" />
+                <Link to='/' className='link-logo'>
+                    <img src={logo} alt="logo-need-to" className="logo" />
+                </Link>
                 <div className="container-nav-links">
-                    <a href="#">Electrónica</a>
-                    <a href="#">Mujer</a>
-                    <a href="#">Hombre</a>
-                    <a href="#">Infantil</a>
-                    <a href="#">Juguetería</a>
-                    <a href="#">Hogar</a>
-                    <a href="#">Salud y belleza</a>
+                    <Link to='/products'>Electrónica</Link>
+                    <Link to='/products'>Mujer</Link>
+                    <Link to='/products'>Hombre</Link>
+                    <Link to='/products'>Infantil</Link>
+                    <Link to='/products'>Hogar</Link>
+                    <Link to='/products'>Salud y belleza</Link>
                 </div>
                 <div className="container-nav-search">
                     <img src={search} alt="icon-search" className="nav-icon" />

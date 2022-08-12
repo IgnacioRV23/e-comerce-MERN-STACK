@@ -1,20 +1,19 @@
 import { Nav } from './components/Nav';
 import { Main } from './components/Main';
 import { Footer } from './components/Footer';
+import { Route, Routes } from 'react-router-dom';
 import { Products } from './components/Products';
 
 function App() {
   return (
     <>
-      {/*Componente de navegacion.*/}
       <Nav/>
 
-      <Products/>
+      <Routes>
+        <Route path='/' element={<Main/>}/>
+        <Route path='/products' element={<Products/>}/>
+      </Routes>
 
-      {/*Componente de todo el apartado principal.*/}
-      <Main/>
-
-      {/*Componente de todo el apartado de pie de pagina.*/}
       <Footer/>
     </>
   );
