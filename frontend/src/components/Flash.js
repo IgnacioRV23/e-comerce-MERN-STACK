@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
 import bolt from '../icons/bolt.svg';
-import bagWoman from '../img/main/bag-woman.png';
+import React, { useEffect, useState } from 'react'
+const productsImg = require.context('../img/products', true);
 
-export const Flash = () => {
+export const Flash = ({ list }) => {
     const [hour, setHour] = useState('');
 
     const [minute, setMinute] = useState('');
@@ -13,7 +13,7 @@ export const Flash = () => {
         showTime();
     }, []);
 
-    function showTime(){
+    const showTime = () => {
         let date = new Date();
         let h = date.getHours();
         let m = date.getMinutes();
@@ -22,7 +22,7 @@ export const Flash = () => {
         setMinute((m < 10) ? "0" + m : m);
         setSecond((s < 10) ? "0" + s : s);
         setTimeout(showTime, 1000);
-    }
+    };
 
     return (
         <div className="container_sale">
@@ -37,25 +37,35 @@ export const Flash = () => {
             </div>
 
             <div className="container-cards cards-flash">
-                <article className="card">
-                    <div className="container-card-img">
-                        <div className="tag-flash">
-                            <img src={bolt} alt="icon-bolt" />
-                            <p className="flash">Flash</p>
-                        </div>
-                        <img src={bagWoman} alt="bag-woman" className="product-img" />
-                    </div>
-                    <div className="card-detail">
-                        <p className="product-name">Nombre del producto</p>
-                        <p className="product-detail">Detalle</p>
-                        <p className="price-off">$16</p>
-                        <p className="price-red">$10</p>
-                    </div>
-                    <div className="card-container-btn">
-                        <button className="btn btn-black">Agregar al carrito</button>
-                        <button className="btn btn-red">Comprar</button>
-                    </div>
-                </article>
+                <div className="container-cards">
+                    {
+                        list.map((element) => {
+                            if (element.sale < 0) {
+                                return (
+                                    <article className="card" key={element._id}>
+                                        <div className="container-card-img">
+                                            <div className="tag-flash">
+                                                <img src={bolt} alt="icon-bolt" />
+                                                <p className="flash">Flash</p>
+                                            </div>
+                                            <img src={productsImg(`./${element.image}`)} alt={element.name} className="product-img" />
+                                        </div>
+                                        <div className="card-detail">
+                                            <p className="product-name">{element.name}</p>
+                                            <p className="product-detail">{element.detail}</p>
+
+                                            <p className="price">${element.price}</p>
+                                        </div>
+                                        <div className="card-container-btn">
+                                            <button className="btn btn-black">Agregar al carrito</button>
+                                            <button className="btn btn-red">Comprar</button>
+                                        </div>
+                                    </article>
+                                )
+                            }
+                        })
+                    }
+                </div>
             </div>
         </div>
     )

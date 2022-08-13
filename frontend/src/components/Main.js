@@ -20,7 +20,7 @@ export const Main = ({list}) => {
 
       <Category />
 
-      <Flash />
+      <Flash list={list}/>
 
       <div className="container_anuncio">
         <img src={imgMain.ad} alt="anuncio" className="img-anuncio" />

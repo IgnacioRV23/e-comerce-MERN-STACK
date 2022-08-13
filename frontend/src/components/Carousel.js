@@ -16,5 +16,5 @@ export const Carousel = () => {
         <img src={banner5} alt="img-banner5" className="img-left" id="imgBanner5" />
     </div>
   )
-  carousel();
+  carousel();  
 }

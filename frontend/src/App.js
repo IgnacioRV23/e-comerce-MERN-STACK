@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
     getProducts();
-  }, []);
+  }, [list]);
 
   return (
     <>
