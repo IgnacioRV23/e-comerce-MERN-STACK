@@ -1,7 +1,19 @@
 import React from 'react'
-import bagWoman from '../img/main/bag-woman.png';
+const productsImg = require.context('../img/products', true);
 
-export const Sales = () => {
+export const Sales = ({ list }) => {
+
+    //Este metodo se encarga de tomar el valor inicial de un producto calcula el descuento y lo retorna.
+    //resultado del descuento = precio del producto * valor porcentual / 100
+    //precio final = valor inicial del producto - resultado del descuento.
+    const sale = (price, priceOff) => {
+        const descount = (price * priceOff) / 100;
+        const result = price - descount;
+        return result;
+    };
+
+    console.log(list.length)
+
     return (
         <div className="container_sale">
             <h2 className="title-sale">Descuentos</h2>
@@ -11,22 +23,31 @@ export const Sales = () => {
             </div>
 
             <div className="container-cards">
-                <article className="card">
-                    <div className="container-card-img">
-                        <p className="tag-sale">10%OFF</p>
-                        <img src={bagWoman} alt="bag-woman" className="product-img" />
-                    </div>
-                    <div className="card-detail">
-                        <p className="product-name">Nombre del producto</p>
-                        <p className="product-detail">Detalle</p>
-                        <p className="price-off">$16</p>
-                        <p className="price-red">$10</p>
-                    </div>
-                    <div className="card-container-btn">
-                        <button className="btn btn-black">Agregar al carrito</button>
-                        <button className="btn btn-red">Comprar</button>
-                    </div>
-                </article>
+                {
+                    list.map((element, key) => {
+                        if (element.sale > 0 && key <= 3) {
+                            return (
+                                <article className="card" key={element._id}>
+                                    <div className="container-card-img">
+                                        <p className="tag-sale">{element.sale}%OFF</p>
+                                        <img src={productsImg(`./${element.image}`)} alt={element.name} className="product-img" />
+                                    </div>
+                                    <div className="card-detail">
+                                        <p className="product-name">{element.name}</p>
+                                        <p className="product-detail">{element.detail}</p>
+    
+                                        <p className="price-off">${element.price}</p>
+                                        <p className="price-red">${sale(element.price, element.sale)}</p>
+                                    </div>
+                                    <div className="card-container-btn">
+                                        <button className="btn btn-black">Agregar al carrito</button>
+                                        <button className="btn btn-red">Comprar</button>
+                                    </div>
+                                </article>
+                            )
+                        }
+                    })
+                }
             </div>
         </div>
     )

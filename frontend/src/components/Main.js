@@ -11,12 +11,12 @@ import { Category } from './Category';
 import { Flash } from './Flash';
 import { imgMain } from '../js/imgMain';
 
-export const Main = () => {
+export const Main = ({list}) => {
   return (
     <main className="main">
       <Carousel />
 
-      <Sales />
+      <Sales list={list}/>
 
       <Category />
 
