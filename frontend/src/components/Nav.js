@@ -11,6 +11,7 @@ import menu from '../icons/menu.svg';
 import { Link } from 'react-router-dom';
 
 export const Nav = () => {
+    //State y funcion encargada de validar cuando se debe de  utilizar el menu en dispositivo movil.
     const [checkMenu, setCheckMenu] = useState(false);
 
     const showMenu = () => {
@@ -30,7 +31,7 @@ export const Nav = () => {
                     <img src={logo} alt="logo-need-to" className="logo" />
                 </Link>
                 <div className="container-nav-links">
-                    <Link to='/products'>Electrónica</Link>
+                    <Link to='/products/'>Electrónica</Link>
                     <Link to='/products'>Mujer</Link>
                     <Link to='/products'>Hombre</Link>
                     <Link to='/products'>Infantil</Link>
