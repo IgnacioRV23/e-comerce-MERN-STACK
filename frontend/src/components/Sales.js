@@ -12,7 +12,18 @@ export const Sales = ({ list }) => {
         return result;
     };
 
-    console.log(list.length)
+    var productsArray = [];
+
+    function maxProducts() {
+        let count = 0;
+        list.map(element => {
+            if(element.sale > 0  && count < 4) {
+                productsArray.push(element);
+                count++;
+            }
+        });
+    }
+    maxProducts();
 
     return (
         <div className="container_sale">
@@ -24,8 +35,8 @@ export const Sales = ({ list }) => {
 
             <div className="container-cards">
                 {
-                    list.map((element, key) => {
-                        if (element.sale > 0 && key <= 3) {
+                    productsArray.map((element) => {
+                        if (element.sale > 0) {
                             return (
                                 <article className="card" key={element._id}>
                                     <div className="container-card-img">

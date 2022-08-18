@@ -9,6 +9,19 @@ export const Flash = ({ list }) => {
 
     const [second, setSecond] = useState('');
 
+    var productsArray = [];
+
+    function maxProducts() {
+        let count = 0;
+        list.map(element => {
+            if(element.sale < 0  && count < 4) {
+                productsArray.push(element);
+                count++;
+            }
+        });
+    }
+    maxProducts();
+
     useEffect(() => {
         showTime();
     }, []);
@@ -39,7 +52,7 @@ export const Flash = ({ list }) => {
             <div className="container-cards cards-flash">
                 <div className="container-cards">
                     {
-                        list.map((element) => {
+                        productsArray.map((element) => {
                             if (element.sale < 0) {
                                 return (
                                     <article className="card" key={element._id}>
