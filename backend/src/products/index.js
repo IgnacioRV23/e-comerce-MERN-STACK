@@ -17,9 +17,9 @@ const getProducts = (app) => {
 
 const getCategory = (app) => {
     try {
-        app.get('/api/products/:catego', async (req, res) => {
-            let {params:{catego}} = req;
-            const result = await Product.find({category:catego});
+        app.get('/api/products/:categoryProduct', async (req, res) => {
+            let {params:{categoryProduct}} = req;
+            const result = await Product.find({category:categoryProduct});
             res.json({data:result});
         });
     } catch (error) {

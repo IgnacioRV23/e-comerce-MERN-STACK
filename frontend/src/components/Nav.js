@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { NavMobile } from './NavMobile';
 import '../styles/nav.css';
 
@@ -9,8 +9,11 @@ import close from '../icons/close.svg';
 import cart from '../icons/cart.svg';
 import menu from '../icons/menu.svg';
 import { Link } from 'react-router-dom';
+import { CategoryContext } from '../context/categoryContext';
 
 export const Nav = () => {
+    const { setCategory } = useContext(CategoryContext);
+
     //State y funcion encargada de validar cuando se debe de  utilizar el menu en dispositivo movil.
     const [checkMenu, setCheckMenu] = useState(false);
 
@@ -31,12 +34,12 @@ export const Nav = () => {
                     <img src={logo} alt="logo-need-to" className="logo" />
                 </Link>
                 <div className="container-nav-links">
-                    <Link to='/products/'>Electrónica</Link>
-                    <Link to='/products'>Mujer</Link>
-                    <Link to='/products'>Hombre</Link>
-                    <Link to='/products'>Infantil</Link>
-                    <Link to='/products'>Hogar</Link>
-                    <Link to='/products'>Salud y belleza</Link>
+                    <Link to='/api/products/elec' onClick={e => setCategory('elec')}>Electrónica</Link>
+                    <Link to='/api/products/woman' onClick={e => setCategory('woman')}>Mujer</Link>
+                    <Link to='/api/products/man' onClick={e => setCategory('man')}>Hombre</Link>
+                    <Link to='/api/products/kids' onClick={e => setCategory('kids')}>Infantil</Link>
+                    <Link to='/api/products/home' onClick={e => setCategory('home')}>Hogar</Link>
+                    <Link to='/api/products/care' onClick={e => setCategory('care')}>Salud y belleza</Link>
                 </div>
                 <div className="container-nav-search">
                     <img src={search} alt="icon-search" className="nav-icon" />
@@ -52,12 +55,12 @@ export const Nav = () => {
                 </div>
 
                 <div className='container_menu'>
-                    <img src={checkMenu ? close : menu} alt='menu' className='menu' onClick={showMenu}/>
+                    <img src={checkMenu ? close : menu} alt='menu' className='menu' onClick={showMenu} />
                 </div>
             </nav>
 
-            { checkMenu ? 
-                <NavMobile/>
+            {checkMenu ?
+                <NavMobile />
                 :
                 null
             }
